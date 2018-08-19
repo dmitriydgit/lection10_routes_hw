@@ -1,0 +1,50 @@
+<button class="btn btn-primary" (click)="goBack()">назад</button>
+
+<div class="film-single-wrapper">
+	<div class="film-single-left">
+		<h2>{{ film?.title }}</h2>
+		<h4>{{ film?.tagline }}</h4>
+		<img src="{{imgPath + film.poster_path}}" class="img-rounded">
+	</div>
+	<div class="film-single-right">
+		<h4>{{film?.overview}}</h4>
+		<h4>Бюджет: {{film?.budget}}</h4>
+		<h4>Дата выхода: {{film?.release_date}}</h4>
+
+		<h4>Жанры:
+			<h6 *ngFor="let genre of genres">{{genre.name}}</h6>
+		</h4>
+
+
+	</div>
+	<!-- good !== null || good !== undefined ? good : null  -->
+
+</div>
+
+<!--
+	/*adult:false
+backdrop_path:"/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg"
+belongs_to_collection:{id: 86311, name: "Мстители (Коллекция)", poster_path: "/qJawKUQcIBha507UahUlX0keOT7.jpg", backdrop_path: "/zuW6fOiusv4X9nnW3paHGfXcSll.jpg"}
+budget:300000000
+genres:(4) [{…}, {…}, {…}, {…}]
+homepage:"http://marvel.com/movies/movie/223/avengers_infinity_war_part_1"
+id:299536
+imdb_id:"tt4154756"
+original_language:"en"
+original_title:"Avengers: Infinity War"
+overview:"Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы справиться один супергерой, новая угроза возникает из космоса: Танос. Межгалактический тиран преследует цель собрать все шесть Камней Бесконечности — артефакты невероятной силы, с помощью которых можно менять реальность по своему желанию. Всё, с чем Мстители сталкивались ранее, вело к этому моменту — судьба Земли никогда ещё не была столь неопределённой."
+popularity:366.765
+poster_path:"/qIUFg6tzKeK5bUDguonWCAFceNB.jpg"
+production_companies:[{…}]
+production_countries:[{…}]
+release_date:"2018-04-25"
+revenue:2045186856
+runtime:149
+spoken_languages:[{…}]
+status:"Released"
+tagline:"Целая вселенная. Раз и навсегда"
+title:"Мстители: Война бесконечности"
+video:false
+vote_average:8.3
+vote_count:6921 */
+-->

@@ -1,0 +1,18 @@
+.film-single-wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: left;
+}
+
+.film-single-right{
+	margin: 30px;
+}
+
+.film-single-left{
+	margin: 20px;
+}
+
+.img-rounded{
+	margin-top: 20px;
+}

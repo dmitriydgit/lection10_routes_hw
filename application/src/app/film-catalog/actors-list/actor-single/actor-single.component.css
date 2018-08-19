@@ -1,0 +1,18 @@
+.actor-single-wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: left;
+}
+
+.actor-single-right{
+	margin: 80px;
+}
+
+.actor-single-left{
+	margin: 20px;
+}
+
+.img-rounded{
+	margin-top: 20px;
+}

@@ -1,0 +1,45 @@
+<!-- <div class="wrapper">
+
+    <h2>Вас приветсвует приложение о фильмах</h2><br>
+
+    <a href={{website.url}}>{{website.title}}</a>
+
+    <div>some text {{value}}</div>
+    <span [class.red]="isRed">Красный</span>
+
+</div> -->
+
+<div class="text-center">
+	<h1>Популярные фильмы</h1>
+
+</div>
+
+<mat-grid-list cols="3" rowHeight="840px">
+	<mat-grid-tile colspan="1" *ngFor="let film of films">
+		<app-film-item [film]="film" [imgPath]="imgPath"></app-film-item>
+	</mat-grid-tile>
+</mat-grid-list>
+
+<div class="text-center">
+	<a href="/films">Смотреть еще...</a>
+
+</div>
+<hr>
+
+
+<div class="text-center">
+	<h1>Популярные актеры</h1>
+
+</div>
+
+<mat-grid-list cols="3" rowHeight="840px">
+	<mat-grid-tile colspan="1" *ngFor="let actor of actors">
+		<app-actor-item [actor]="actor" [imgPath]="imgPath"></app-actor-item>
+	</mat-grid-tile>
+</mat-grid-list>
+
+<div class="text-center">
+	<a href="/actors">Смотреть еще...</a>
+
+</div>
+<hr>
