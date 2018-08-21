@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, ElementRef, ViewChild, SimpleChanges } from '@angular/core';
-import { Film } from '../../../film';
+import { Film } from '../../../shared/models/film';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -41,9 +41,9 @@ export class FilmItemComponent implements OnInit {
 		this.router.navigate(['/films', id, 'view']);
 	}
 
-	showFilmInfo() {
-		return true;
-	}
+	// showFilmInfo() {
+	// 	return true;
+	// }
 
 	formatPlr(popularity) {
 		let pop = Math.round(+popularity);

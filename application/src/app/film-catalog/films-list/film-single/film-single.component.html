@@ -1,24 +1,26 @@
-<button class="btn btn-primary" (click)="goBack()">назад</button>
+<div class="single-cmp">
+	<button class="single-btn" mat-raised-button color="primary" (click)="goBack()">назад</button>
 
-<div class="film-single-wrapper">
-	<div class="film-single-left">
-		<h2>{{ film?.title }}</h2>
-		<h4>{{ film?.tagline }}</h4>
-		<img src="{{imgPath + film.poster_path}}" class="img-rounded">
+	<div class="film-single-wrapper">
+		<div class="film-single-left">
+			<h2>{{film?.title}}</h2>
+			<h4>{{film?.tagline}}</h4>
+			<img *ngIf="film" src="{{imgPath + film.poster_path}}" class="img-rounded">
+		</div>
+		<div class="film-single-right">
+			<h4>{{film?.overview}}</h4>
+			<h4>Бюджет: {{film?.budget}}</h4>
+			<h4>Дата выхода: {{film?.release_date}}</h4>
+
+			<h4>Жанры:
+				<h6 *ngFor="let genre of genres">{{genre.name}}</h6>
+			</h4>
+
+
+		</div>
+		<!-- good !== null || good !== undefined ? good : null  -->
+
 	</div>
-	<div class="film-single-right">
-		<h4>{{film?.overview}}</h4>
-		<h4>Бюджет: {{film?.budget}}</h4>
-		<h4>Дата выхода: {{film?.release_date}}</h4>
-
-		<h4>Жанры:
-			<h6 *ngFor="let genre of genres">{{genre.name}}</h6>
-		</h4>
-
-
-	</div>
-	<!-- good !== null || good !== undefined ? good : null  -->
-
 </div>
 
 <!--

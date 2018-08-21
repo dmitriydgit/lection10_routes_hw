@@ -18,9 +18,10 @@
 .card-header{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: left;
 	align-items: flex-start;
 	padding:20px;
+	height:72px;
 }
 .card-top{
 	display: flex;
@@ -31,6 +32,7 @@
 
 .film-overwiev{
 	font-size: 16px;
+	height:72px;
 }
 .film-card{
 	width: 400px;

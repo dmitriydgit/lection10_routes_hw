@@ -1,63 +1,51 @@
 <!-- <app-alerts></app-alerts> -->
-<!-- <mat-toolbar color="primary">
+<mat-toolbar color="primary">
 	<mat-toolbar-row>
-		<span>Film Catalog</span>
-		<span class="example-spacer"></span>
-		<a mat-button *ngFor="let link of links" [routerLink]="link.path" [routerLinkActive]="link.active">
-			<mat-icon class="example-icon">{{link.icon}}</mat-icon>{{link.label}}
-		</a>
+		<div class="header-links" *ngIf="isLoggedIn">
+			<a mat-button routerLink="/" class="nav-link">
+				<img class="header-img" src="../assets/3.png">
+			</a>
+
+			<span class="example-spacer"></span>
+
+			<a mat-button *ngFor="let link of links" [routerLink]="link.path" [routerLinkActive]="link.active">
+				<mat-icon class="example-icon">{{link.icon}}</mat-icon>{{link.label}}
+			</a>
+		</div>
+
+		<div class="flex-spacer">
+
+		</div>
+
+		<div class="header-actions">
+			<a mat-button *ngIf="!isLoggedIn">Войти</a>
+			<a mat-button *ngIf="isLoggedIn" (click)="logOut()">Выйти</a>
+		</div>
+
+
 	</mat-toolbar-row>
 </mat-toolbar>
 
-
-<router-outlet></router-outlet> -->
-
-
+<router-outlet></router-outlet>
+<!-- 
 <div class="main-container">
-	<!-- <app-alerts></app-alerts> -->
-	<header class="header-6">
-
-		<!-- <div class="branding">
-
-		</div> -->
-		<div class="branding " *ngIf="isLoggedIn">
+	<header class="">
+		<div class=" " *ngIf="isLoggedIn">
 			<a routerLink="/" class="nav-link">
-				<clr-icon shape="router"></clr-icon>
 				<span class="title">Film Catalog</span>
 			</a>
 			<a mat-button *ngFor="let link of links" [routerLink]="link.path" [routerLinkActive]="link.active">
 				<mat-icon class="nav-text">{{link.icon}}</mat-icon>{{link.label}}
 			</a>
-
-
-			<!-- <a routerLink="/users" routerLinkActive="active" class="nav-link">
-					<span class="nav-text">Пользователи</span>
-				</a>
-			<a routerLink="/about" routerLinkActive="active" class="nav-link">
-				<span class="nav-text">О нас</span>
-			</a> -->
 		</div>
 
 		<div class="header-actions">
-			<clr-dropdown>
-				<button class="nav-icon" clrDropdownTrigger>
-					<clr-icon shape="user"></clr-icon>
-					<clr-icon shape="caret down"></clr-icon>
-				</button>
-				<clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-					<a *ngIf="!isLoggedIn" clrDropdownItem>Войти</a>
-					<a *ngIf="isLoggedIn" (click)="logOut()" clrDropdownItem>Выйти</a>
-				</clr-dropdown-menu>
-			</clr-dropdown>
+			<div>
+				<a *ngIf="!isLoggedIn">Войти</a>
+				<a *ngIf="isLoggedIn" (click)="logOut()">Выйти</a>
+			</div>
 		</div>
 
 	</header>
-
-	<div class="content-container">
-		<div class="content-area">
-
-			<router-outlet></router-outlet>
-
-		</div>
-	</div>
-</div>
+	<router-outlet></router-outlet>
+</div> -->

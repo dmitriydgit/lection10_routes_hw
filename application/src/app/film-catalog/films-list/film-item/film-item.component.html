@@ -15,9 +15,12 @@
 	</mat-card-content>
 	<mat-card-actions>
 
-		<button class="btn btn-primary" (click)="openItemById(film.id)">
-			<i>Просмотреть</i>
+		<!-- class="btn btn-primary" -->
+		<button mat-raised-button color="primary" (click)="openItemById(film.id)">
+			Просмотреть
 		</button>
+
+		<!-- <div class="flex-spacer"></div> -->
 
 		<button *ngIf="!film.isFavorite;else fab" mat-icon-button color="primary" (click)="starFilm(film)">
 			<i class="material-icons">star</i>

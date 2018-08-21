@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
-import { Film } from '../../film';
-import { SortOption } from '../../sort-option';
+import { Film } from '../models/film';
+import { SortOption } from '../models/sort-option';
 import { HttpClient } from '@angular/common/http';
 import { DEFAULT_SETTINGS } from '../configs/config';
 import { Observable } from 'rxjs';
@@ -40,8 +40,9 @@ export class FilmService {
 
 	getDataFromApi(page: number, dataCategory: string) {
 		//	console.log(this.settings)
-		return dataCategory === "films" ? this.getPopularFilms(page, dataCategory) : this.getPopularActors(page, dataCategory)
-
+		return dataCategory === "films"
+			? this.getPopularFilms(page, dataCategory)
+			: this.getPopularActors(page, dataCategory)
 	}
 
 	searchData(srchStr: string, dataCategory: string, page: number) {

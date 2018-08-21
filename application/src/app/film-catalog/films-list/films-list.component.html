@@ -14,10 +14,10 @@
 
 <!-- пагинатор -->
 
-<!-- <div class="paginator">
-	<paginator [totalResults]="pageInfo.totalResults" (pagEmitter)="doPagination($event)">
+<div class="paginator">
+	<paginator [totalResults]="pageInfo.totalResults" [page]="pageInfo.currentPage" (pagEmitter)="doPagination($event)">
 	</paginator>
-</div> -->
+</div>
 
 
 <!-- прогресс-бар -->
@@ -37,10 +37,7 @@
 	</mat-grid-tile>
 </mat-grid-list>
 
-<div class="paginator">
-	<paginator [totalResults]="pageInfo.totalResults" [page]="pageInfo.currentPage" (pagEmitter)="doPagination($event)">
-	</paginator>
-</div>
+
 
 <!-- кнопка загрузки дополнительных фильмов -->
 <!-- <div class="main-container">

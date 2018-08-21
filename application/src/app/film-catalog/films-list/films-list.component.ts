@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, ViewChildren, QueryList, Inject } from '@angular/core';
 import { FilmService } from '../../shared/services/film.service';
 import { BookAndFavService } from '../../shared/services/bookAndFav.service';
-import { Film } from '../../film';
-import { User } from '../../user';
+import { Film } from '../../shared/models/film';
+import { User } from '../../shared/models/user';
 import { NgProgress } from 'ngx-progressbar';
 import { DEFAULT_SETTINGS } from '../../shared/configs/config';
 

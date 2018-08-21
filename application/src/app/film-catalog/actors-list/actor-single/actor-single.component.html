@@ -1,25 +1,24 @@
-<button class="btn btn-primary" (click)="goBack()">назад</button>
+<div class="single-cmp">
+	<button mat-raised-button color="primary" (click)="goBack()">назад</button>
 
-<div class="actor-single-wrapper">
-	<div class="actor-single-left">
-		<h2>{{ actor?.name }}</h2>
-		<img src="{{imgPath + actor.profile_path}}" class="img-rounded">
-		<h4>Также известен как: {{ actor?.also_known_as }}</h4>
-		<h4>Родился в: {{ actor?.place_of_birth }}</h4>
-		<h4>Дата рождения: {{ actor?.birthday }}</h4>
+	<div class="actor-single-wrapper">
+		<div class="actor-single-left">
+			<h2>{{ actor?.name }}</h2>
+			<img *ngIf="actor" src="{{imgPath + actor.profile_path}}" class="img-rounded">
+			<h4>Также известен как: {{ actor?.also_known_as }}</h4>
+			<h4>Родился в: {{ actor?.place_of_birth }}</h4>
+			<h4>Дата рождения: {{ actor?.birthday }}</h4>
+		</div>
+		<div class="actor-single-right">
+			<h4>{{actor?.biography}}</h4>
+
+
+
+		</div>
+		<!-- good !== null || good !== undefined ? good : null  -->
+
 	</div>
-	<div class="actor-single-right">
-		<h4>{{actor?.biography}}</h4>
-
-
-
-
-
-	</div>
-	<!-- good !== null || good !== undefined ? good : null  -->
-
 </div>
-
 <!--
 	adlt: false
 also_known_as  : (8) ["連恩·尼遜", "เลียม นีสัน", "Лиам Нисон", "リーアム・ニーソン", "리암 니슨", "ليام نيسون", "Ліам Нісон", "Вільям Джон Нісон"]
